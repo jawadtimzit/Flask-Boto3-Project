@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<htlml>
+<head>
+
+<style>
+
+        body {
+            background-color: burlywood;
+        }
+
+        h1 {
+            color: orangered;
+            
+        }
+
+        </style>
+
+</head>
+<body>
+
+        <h1 > Jawad Timzit Program 4 </h1 >
+        <br />
+        {% if message %}
+		<p>{{ message }}</p>
+		{% endif %}
+
+        <form action="#" method="POST" >
+        <label for="FirstName" > First Name</label >
+        <input type="text" id="FirstName" name="FirstName" > <br > <br >
+        <label for="LastName" > Last name:</label >
+        <input type="text" id="LastName" name="LastName" > <br > <br >
+		<input type="submit" name="Load" value="Load" id="Load" onclick="javascript: form.action='/load';">
+        <input type="submit" name="Query" value="Query" id="Query" onclick="javascript: form.action='/Query';" >
+        
+        <input type="submit" name="Clear" value="Clear" id="Clear" onclick="javascript: form.action='/';">
+
+        </form >
+</body>
+    
+</htlml >

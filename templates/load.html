@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<htlml>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <table class="table table-striped">
+<tbody>
+<tr>
+{% for header in heading%}
+<th>{{header}}</th>
+{% endfor %}
+</tr>
+{% for row in Load_List%}
+<tr>
+{% for header in heading %}
+{% if header in row %}
+<td>{{ row[header] }}</td>
+{% else %}
+<td>{{ empty_string }}</td>
+{% endif %}
+{% endfor %}
+</tr>
+{% endfor %}
+</tbody>
+</table>
+<form action="/returntomain" method="POST" >
+        
+        
+        <input type="submit" name="returntomain" value="Return To Main Page" id="returntomain" >
+
+</form >
+
+</div>
+</body>
+
+</htlml>

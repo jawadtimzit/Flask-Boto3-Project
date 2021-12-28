@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<htlml>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <table class="table table-striped">
+<tbody>
+
+
+        
+
+
+{% for row in info_detail%}
+
+{% for x in row %}
+<tr>
+<td>{{x}}</td>
+<td>{{row[x]}}</td>
+</tr>
+{% endfor %}
+
+{% endfor %}
+</tbody>
+</table>
+</div>
+
+<form action="/returntomain" method="POST" >
+        
+        
+        <input type="submit" name="returntomain" value="Return To Main Page" id="returntomain" >
+
+</form >
+</body>
+
+</htlml>
